@@ -1,5 +1,4 @@
 import * as Sentry from "@sentry/nextjs";
-import { setupAnalytics } from "@v1/analytics/server";
 import { logger } from "@v1/logger";
 import { getUser } from "@v1/supabase/queries";
 import { createClient } from "@v1/supabase/server";
@@ -63,12 +62,8 @@ export const authActionClient = actionClientWithMeta
     }
 
     if (metadata) {
-      const analytics = await setupAnalytics({
-        userId: user.id,
-      });
-
       if (metadata.track) {
-        analytics.track(metadata.track);
+        console.log(metadata.track);
       }
     }
 
