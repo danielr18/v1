@@ -13,7 +13,6 @@
   },
   "dependencies": {
     "@v1/analytics": "workspace:*",
-    "@v1/kv": "workspace:*",
     "@v1/supabase": "workspace:*",
     "@v1/ui": "workspace:*",
     "dub": "^0.36.5",
